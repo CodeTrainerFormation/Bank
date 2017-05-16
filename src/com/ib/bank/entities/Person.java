@@ -2,7 +2,7 @@ package com.ib.bank.entities;
 
 import com.ib.bank.interfaces.IAccount;
 
-public class Person {
+public abstract class Person {
 	
 	private String firstname;
 	private String lastname;
@@ -44,6 +44,12 @@ public class Person {
 
 	public void setBasket(Basket basket) {
 		this.basket = basket;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.firstname + " " + this.lastname;
 	}
 	
 }

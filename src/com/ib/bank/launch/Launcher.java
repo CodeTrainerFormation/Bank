@@ -2,6 +2,8 @@ package com.ib.bank.launch;
 
 import com.ib.bank.entities.Account;
 import com.ib.bank.entities.Basket;
+import com.ib.bank.entities.Classroom;
+import com.ib.bank.entities.HighSchool;
 import com.ib.bank.entities.Person;
 import com.ib.bank.entities.Product;
 
@@ -15,7 +17,7 @@ public class Launcher {
 		acc.debit(70);
 		acc.viewBalance();
 		
-		Person john = new Person("John", "DOE");
+		HighSchool john = new HighSchool("John", "DOE");
 		john.openAccount();
 		john.getAccount().viewBalance();
 		
@@ -28,6 +30,10 @@ public class Launcher {
 		
 		john.payBasket();
 		john.getAccount().viewBalance();
+		
+		Classroom fac = new Classroom();
+		fac.addStudent(john);
+		fac.viewStudents();
 	}
 
 }
